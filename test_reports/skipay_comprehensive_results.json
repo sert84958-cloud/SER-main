@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-10-22T22:10:36.591277",
+  "summary": {
+    "total_tests": 29,
+    "passed": 29,
+    "failed": 0,
+    "success_rate": 100.0
+  },
+  "critical_failures": [],
+  "failed_tests": [],
+  "test_data": {
+    "test_user_id": "cb38d711-7ce9-44a8-ae08-284a66a29b65",
+    "test_user_email": "testuser1761171034@example.com",
+    "test_user_password": "TestPass123!",
+    "admin_id": "8075695d-8c44-43b8-9736-a9ff4a8c01d0",
+    "settings": {
+      "commission_rate": 9.0,
+      "usd_to_uah_rate": 41.5,
+      "deposit_wallet_address": "TB4K5h9QwFGSYR2LLJS9ejmt9EjHWurvi1"
+    },
+    "trader_id": "158b0ba7-94ef-49e7-84ee-1f67ea20a709",
+    "card_id": "0364c905-33c9-453b-a852-8bba8fee0934",
+    "transaction_id": "0c81174d-705c-4365-bb6c-d38a6abd31c8",
+    "first_trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda"
+  }
+}

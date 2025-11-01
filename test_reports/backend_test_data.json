@@ -1,0 +1,308 @@
+{
+  "test_results": {
+    "total": 24,
+    "passed": 20,
+    "failed": 4,
+    "success_rate": 83.33333333333334
+  },
+  "failed_tests": [
+    {
+      "test": "User request card",
+      "expected": 200,
+      "actual": 400,
+      "endpoint": "user/request-card"
+    },
+    {
+      "test": "Trader confirm payment",
+      "expected": 200,
+      "actual": 400,
+      "endpoint": "trader/confirm-payment/6298e124-5afc-4673-bf1e-d5da11fe1a47"
+    },
+    {
+      "test": "Update settings",
+      "expected": 200,
+      "actual": 422,
+      "endpoint": "admin/settings"
+    },
+    {
+      "test": "Unauthorized access to admin",
+      "expected": 401,
+      "actual": 403,
+      "endpoint": "admin/traders"
+    }
+  ],
+  "test_data": {
+    "admin_profile": {
+      "id": "8075695d-8c44-43b8-9736-a9ff4a8c01d0",
+      "email": "admin@test.com",
+      "role": "admin",
+      "trader": null
+    },
+    "trader_profile": {
+      "id": "70ef0dd2-6626-4a4f-b34b-2b589deab293",
+      "email": "trader@test.com",
+      "role": "trader",
+      "trader": {
+        "id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "user_id": "70ef0dd2-6626-4a4f-b34b-2b589deab293",
+        "name": "\u0418\u0432\u0430\u043d \u041f\u0435\u0442\u0440\u043e\u0432",
+        "nickname": "trader_ivan",
+        "usdt_address": "TRXabcd1234567890",
+        "phone": "+380991234567",
+        "usdt_balance": 9117.5,
+        "is_blocked": false,
+        "created_at": "2025-10-22T12:43:56.189905+00:00"
+      }
+    },
+    "user_profile": {
+      "id": "3d155c46-8d79-4a50-aab3-5761dd898537",
+      "email": "user@test.com",
+      "role": "user",
+      "trader": null
+    },
+    "trader_cards": [
+      {
+        "id": "7fb4b829-4ad9-41ab-873f-9a309b92731d",
+        "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "card_number": "4149 6293 1234 5678",
+        "bank_name": "\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a",
+        "holder_name": "IVAN PETROV",
+        "limit": 50000.0,
+        "current_usage": 9047.0,
+        "status": "active",
+        "currency": "UAH",
+        "created_at": "2025-10-22T12:43:56.212204+00:00"
+      },
+      {
+        "id": "6ca5b654-bd59-4f4e-bf68-c05844c713aa",
+        "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "card_number": "5555 4444 3333 2222",
+        "bank_name": "Monobank",
+        "holder_name": "JOHN DOE",
+        "limit": 25000.0,
+        "current_usage": 0,
+        "status": "active",
+        "currency": "UAH",
+        "created_at": "2025-10-22T12:47:36.105721+00:00"
+      }
+    ],
+    "trader_transactions": [
+      {
+        "id": "7456bb0a-7e35-4ff2-8344-a4bfeba0f1f9",
+        "user_id": "3d155c46-8d79-4a50-aab3-5761dd898537",
+        "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "card_id": "7fb4b829-4ad9-41ab-873f-9a309b92731d",
+        "amount": 4523.5,
+        "currency": "UAH",
+        "status": "pending",
+        "created_at": "2025-10-22T15:37:59.259015+00:00",
+        "user_confirmed_at": null,
+        "completed_at": null,
+        "expires_at": "2025-10-22T16:07:59.259026+00:00",
+        "card": {
+          "id": "7fb4b829-4ad9-41ab-873f-9a309b92731d",
+          "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+          "card_number": "4149 6293 1234 5678",
+          "bank_name": "\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a",
+          "holder_name": "IVAN PETROV",
+          "limit": 50000.0,
+          "current_usage": 9047.0,
+          "status": "active",
+          "currency": "UAH",
+          "created_at": "2025-10-22T12:43:56.212204+00:00"
+        }
+      },
+      {
+        "id": "323a4528-f668-44e2-893a-9ae6dbafe7ee",
+        "user_id": "3d155c46-8d79-4a50-aab3-5761dd898537",
+        "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "card_id": "7fb4b829-4ad9-41ab-873f-9a309b92731d",
+        "amount": 4523.5,
+        "currency": "UAH",
+        "status": "pending",
+        "created_at": "2025-10-22T15:37:33.981455+00:00",
+        "user_confirmed_at": null,
+        "completed_at": null,
+        "expires_at": "2025-10-22T16:07:33.981464+00:00",
+        "card": {
+          "id": "7fb4b829-4ad9-41ab-873f-9a309b92731d",
+          "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+          "card_number": "4149 6293 1234 5678",
+          "bank_name": "\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a",
+          "holder_name": "IVAN PETROV",
+          "limit": 50000.0,
+          "current_usage": 9047.0,
+          "status": "active",
+          "currency": "UAH",
+          "created_at": "2025-10-22T12:43:56.212204+00:00"
+        }
+      },
+      {
+        "id": "6298e124-5afc-4673-bf1e-d5da11fe1a47",
+        "user_id": "99259460-8c3d-459d-a7b7-5e7e86973ce1",
+        "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "card_id": "6ca5b654-bd59-4f4e-bf68-c05844c713aa",
+        "amount": 1000.0,
+        "currency": "UAH",
+        "status": "user_confirmed",
+        "created_at": "2025-10-22T13:09:57.227180+00:00",
+        "user_confirmed_at": "2025-10-22T13:10:09.916348+00:00",
+        "completed_at": null,
+        "expires_at": "2025-10-22T13:39:57.227192+00:00",
+        "card": {
+          "id": "6ca5b654-bd59-4f4e-bf68-c05844c713aa",
+          "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+          "card_number": "5555 4444 3333 2222",
+          "bank_name": "Monobank",
+          "holder_name": "JOHN DOE",
+          "limit": 25000.0,
+          "current_usage": 0,
+          "status": "active",
+          "currency": "UAH",
+          "created_at": "2025-10-22T12:47:36.105721+00:00"
+        }
+      },
+      {
+        "id": "c45585eb-c8a0-4e4d-bd1e-5a51e5a86079",
+        "user_id": "99259460-8c3d-459d-a7b7-5e7e86973ce1",
+        "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "card_id": "6ca5b654-bd59-4f4e-bf68-c05844c713aa",
+        "amount": 1000.0,
+        "currency": "UAH",
+        "status": "user_confirmed",
+        "created_at": "2025-10-22T12:54:30.205742+00:00",
+        "user_confirmed_at": "2025-10-22T12:55:01.286533+00:00",
+        "completed_at": null,
+        "expires_at": "2025-10-22T13:24:30.205753+00:00",
+        "card": {
+          "id": "6ca5b654-bd59-4f4e-bf68-c05844c713aa",
+          "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+          "card_number": "5555 4444 3333 2222",
+          "bank_name": "Monobank",
+          "holder_name": "JOHN DOE",
+          "limit": 25000.0,
+          "current_usage": 0,
+          "status": "active",
+          "currency": "UAH",
+          "created_at": "2025-10-22T12:47:36.105721+00:00"
+        }
+      },
+      {
+        "id": "5c2df68f-2190-4f76-9cde-6643714e9e33",
+        "user_id": "3d155c46-8d79-4a50-aab3-5761dd898537",
+        "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "card_id": "6ca5b654-bd59-4f4e-bf68-c05844c713aa",
+        "amount": 5000.0,
+        "currency": "UAH",
+        "status": "pending",
+        "created_at": "2025-10-22T12:49:14.343127+00:00",
+        "user_confirmed_at": null,
+        "completed_at": null,
+        "expires_at": "2025-10-22T13:19:14.343138+00:00",
+        "card": {
+          "id": "6ca5b654-bd59-4f4e-bf68-c05844c713aa",
+          "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+          "card_number": "5555 4444 3333 2222",
+          "bank_name": "Monobank",
+          "holder_name": "JOHN DOE",
+          "limit": 25000.0,
+          "current_usage": 0,
+          "status": "active",
+          "currency": "UAH",
+          "created_at": "2025-10-22T12:47:36.105721+00:00"
+        }
+      },
+      {
+        "id": "e4687268-9eb3-4a30-a531-60e93dfdb2c9",
+        "user_id": "3d155c46-8d79-4a50-aab3-5761dd898537",
+        "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "card_id": "7fb4b829-4ad9-41ab-873f-9a309b92731d",
+        "amount": 500.0,
+        "currency": "UAH",
+        "status": "completed",
+        "created_at": "2025-10-22T12:46:50.135909+00:00",
+        "user_confirmed_at": "2025-10-22T12:46:50.397240+00:00",
+        "completed_at": "2025-10-22T12:46:53.200052+00:00",
+        "expires_at": "2025-10-22T13:16:50.135920+00:00",
+        "card": {
+          "id": "7fb4b829-4ad9-41ab-873f-9a309b92731d",
+          "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+          "card_number": "4149 6293 1234 5678",
+          "bank_name": "\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a",
+          "holder_name": "IVAN PETROV",
+          "limit": 50000.0,
+          "current_usage": 9047.0,
+          "status": "active",
+          "currency": "UAH",
+          "created_at": "2025-10-22T12:43:56.212204+00:00"
+        }
+      },
+      {
+        "id": "83e12daa-b9df-4639-8cf1-9a019926bfaa",
+        "user_id": "3d155c46-8d79-4a50-aab3-5761dd898537",
+        "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "card_id": "7fb4b829-4ad9-41ab-873f-9a309b92731d",
+        "amount": -100.0,
+        "currency": "UAH",
+        "status": "pending",
+        "created_at": "2025-10-22T12:45:48.900336+00:00",
+        "user_confirmed_at": null,
+        "completed_at": null,
+        "expires_at": "2025-10-22T13:15:48.900347+00:00",
+        "card": {
+          "id": "7fb4b829-4ad9-41ab-873f-9a309b92731d",
+          "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+          "card_number": "4149 6293 1234 5678",
+          "bank_name": "\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a",
+          "holder_name": "IVAN PETROV",
+          "limit": 50000.0,
+          "current_usage": 9047.0,
+          "status": "active",
+          "currency": "UAH",
+          "created_at": "2025-10-22T12:43:56.212204+00:00"
+        }
+      },
+      {
+        "id": "6975d33a-91ea-4ac3-aadf-168c334823b6",
+        "user_id": "3d155c46-8d79-4a50-aab3-5761dd898537",
+        "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "card_id": "7fb4b829-4ad9-41ab-873f-9a309b92731d",
+        "amount": 1000.0,
+        "currency": "UAH",
+        "status": "completed",
+        "created_at": "2025-10-22T12:45:48.092912+00:00",
+        "user_confirmed_at": "2025-10-22T12:45:48.288037+00:00",
+        "completed_at": "2025-10-22T12:45:48.496072+00:00",
+        "expires_at": "2025-10-22T13:15:48.092923+00:00",
+        "card": {
+          "id": "7fb4b829-4ad9-41ab-873f-9a309b92731d",
+          "trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+          "card_number": "4149 6293 1234 5678",
+          "bank_name": "\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a",
+          "holder_name": "IVAN PETROV",
+          "limit": 50000.0,
+          "current_usage": 9047.0,
+          "status": "active",
+          "currency": "UAH",
+          "created_at": "2025-10-22T12:43:56.212204+00:00"
+        }
+      }
+    ],
+    "pending_transaction": "6298e124-5afc-4673-bf1e-d5da11fe1a47",
+    "all_traders": [
+      {
+        "id": "d2ccd73a-4e41-46f6-8924-59beb6656dda",
+        "user_id": "70ef0dd2-6626-4a4f-b34b-2b589deab293",
+        "name": "\u0418\u0432\u0430\u043d \u041f\u0435\u0442\u0440\u043e\u0432",
+        "nickname": "trader_ivan",
+        "usdt_address": "TRXabcd1234567890",
+        "phone": "+380991234567",
+        "usdt_balance": 9117.5,
+        "is_blocked": false,
+        "created_at": "2025-10-22T12:43:56.189905+00:00",
+        "email": "trader@test.com"
+      }
+    ],
+    "first_trader_id": "d2ccd73a-4e41-46f6-8924-59beb6656dda"
+  }
+}
